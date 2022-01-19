@@ -1,0 +1,24 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 500px;
+    height: 270px;
+    background-color: burlywood ;
+    margin: 0px auto;
+    padding: 10px;
+}
+h2{
+    text-align: center;
+}
+.container label{
+    width: 30%;
+    float: left;
+}
+.container input{
+    width: 65%;
+}
+.form_group{
+    margin: 10px;
+}

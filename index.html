@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Register Personal Account</h2>
+        <form method="post" onsubmit="return register();">
+            <div class="form_group">
+                <label for="">Full name</label>
+                <input type="text" required  id="fullname" minlength="8"> 
+            </div>
+            <div class="form_group">
+                <label for="">Email</label>
+                <input type="email" required id="email">
+            </div>
+            <div class="form_group">
+                <label for="">Age</label>
+                <input required id="age">
+            </div>
+            <div class="form_group">
+                <label for="">Password</label>
+                <input type="text" required id="password" minlength="8">
+            </div>
+            <div class="form_group">
+                <label for="">Confirm Password</label>
+                <input type="text" required id="confirm">
+            </div>
+            <div class="form_group">
+                <label for=""> &nbsp; </label>
+                <button>Register</button>
+                <button>Reset</button>
+            </div class="form_group">
+        </form>
+    </div>
+</body>
+<script>
+    function register(){
+        var fullname = document.getElementById('fullname').value
+        var email = document.getElementById('email').value
+        var age = document.getElementById('age').value
+        var password = document.getElementById('password').value
+        var confirm = document.getElementById('confirm').value
+        if(password != confirm){
+            alert('Mật khẩu không trùng khớp !!!')
+            return false;
+        }
+
+        localStorage.setItem('fullname', fullname)
+        localStorage.setItem('email', email)
+        localStorage.setItem('age', age)
+        localStorage.setItem('password', password)
+        localStorage.setItem('confirm', confirm)
+        return true
+    }
+</script>
+
+</html>

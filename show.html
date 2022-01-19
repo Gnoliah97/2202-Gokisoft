@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="hien_thi()">
+    <div >
+        <div>
+            <div>
+                <div id="fullname">Full name: </div>
+            </div>
+            <div>
+                <div id="email">Email: </div>
+            </div>
+            <div>
+                <div id="age">Age: </div>
+            </div>
+            <div>
+                <div id="password">Password: </div>
+            </div>
+            <div>
+                <div id="confirm">Confirm Password: </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function hien_thi(){
+        var fullname = localStorage.getItem('fullname')
+        var email = localStorage.getItem('email')
+        var age = localStorage.getItem('age')
+        var password = localStorage.getItem('password')
+        var confirm = localStorage.getItem('confirm')
+
+        document.getElementById('fullname').innerHTML += fullname
+        document.getElementById('email').innerHTML += email
+        document.getElementById('age').innerHTML += age
+        document.getElementById('password').innerHTML += password
+        document.getElementById('confirm').innerHTML += confirm
+
+    }
+</script>
+</body>
+</html>
